@@ -1,0 +1,16 @@
+{
+  "model_name": "distilgpt2",
+  "embeddings_model": "all-MiniLM-L6-v2",
+  "faiss_index_path": "data/faiss",
+  "history_path": "data/history.jsonl",
+  "memories_store": "data/memories.jsonl",
+  "max_memories": 10000,
+  "retrieve_k": 4,
+  "generation": {
+    "max_new_tokens": 128,
+    "temperature": 0.8,
+    "top_k": 50,
+    "top_p": 0.95
+  },
+  "use_gpu": false
+}
