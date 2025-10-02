@@ -1,0 +1,20 @@
+```markdown
+# Digital Son (Hijo Digital) — Local-first, first-run auto-init, CPU-first (GPU toggle)
+
+Resumen
+- Proyecto listo para ejecutarse en una máquina personal. La primera ejecución crea todo automáticamente (data/, checkpoint inicial, FAISS index vacío) y solicita un nombre para el "Hijo Digital".
+- Cada directorio del proyecto contiene su propia "mente" (metadata, history, memories). Para crear otro Hijo Digital, importar el proyecto en otra carpeta.
+- CPU por defecto; cambia `use_gpu` en config.json a `true` o usa `--gpu` para intentar usar GPU (si está disponible).
+- Política explícita: solo se guardan recuerdos permanentes cuando el usuario usa `/enseñar <texto>`.
+
+Comandos rápidos
+- python run.py               # ejecuta (CPU por defecto según config.json)
+- python run.py --gpu         # intenta usar GPU si está disponible
+- en consola: /enseñar <texto> , /recuerdos , /guardar , /salir
+
+Siguientes pasos sugeridos
+- Añadir adapters/LoRA + worker asíncrono para entrenamiento cuando haya GPU.
+- Añadir filtros PII/toxicity antes de indexar memorias.
+- Implementar export/import seguro (.mindpkg) con firma del paquete.
+
+```
